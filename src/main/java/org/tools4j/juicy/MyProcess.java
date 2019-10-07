@@ -7,6 +7,7 @@ public class MyProcess implements Process {
     private final UserService userService;
     private final Set<Session> sessions;
 
+    //Constructor injection ensures immutability
     @Inject
     public MyProcess(UserService userService, Set<Session> sessions) {
         this.userService = userService;
