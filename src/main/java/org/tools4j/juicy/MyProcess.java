@@ -8,6 +8,7 @@ public class MyProcess implements Process {
     private final Set<Session> sessions;
 
     //Constructor injection ensures immutability
+    //Using javax.inject.Inject.  i.e. other DI frameworks could be swapped in later
     @Inject
     public MyProcess(UserService userService, Set<Session> sessions) {
         this.userService = userService;
